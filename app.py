@@ -8,15 +8,12 @@ conn = psycopg2.connect(
     user='postgres',
     password='2004',
     host='localhost',
-    port='5432'
-)
+    port='5432')
 cursor = conn.cursor()
-
 
 @app.route('/login/', methods=['GET'])
 def index():
     return render_template('login.html')
-
 
 @app.route('/login/', methods=['POST'])
 def logen():
